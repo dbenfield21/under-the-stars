@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 
+const Schema = mongoose.Schema
+
 const commentSchema = new mongoose.Schema({
   rating: Number,
   content: String, 
