@@ -1,14 +1,14 @@
 import { Router } from 'express'
-import * as campsitesCtrl from '../controllers/campsites'
+import * as campsitesCtrl from '../controllers/campsites.js'
 
 const router = Router()
 
 
-router.get()
+// router.get()
 
-router.post()
+// router.post()
 
-router.patch()
+// router.patch()
 
 
 
@@ -16,6 +16,12 @@ function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();
   res.redirect("/auth/google");
 }
+
+
+router.post("/campsiteSearch", isLoggedIn, campsitesCtrl.campsiteSearch) 
+
+
+
 
 // Quick way to test a newly mounted router:
 // router.get('/', function(req, res) {
@@ -25,3 +31,6 @@ function isLoggedIn(req, res, next) {
 
 
 
+export {
+  router,
+}

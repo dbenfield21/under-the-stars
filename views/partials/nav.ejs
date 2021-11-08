@@ -8,10 +8,11 @@
       <a href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
-    <!-- <form action= "/" method="POST" -->
-
-
-
+    
+      <form action="/campsites/campsiteSearch" method="POST">
+        <input name= "search" type="text" placeholder="Search All Campsites">
+        <button type="search">Get Campsites</button>
+      </form>
 
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
