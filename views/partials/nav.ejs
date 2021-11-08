@@ -8,12 +8,6 @@
       <a href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
-    
-      <form action="/campsites/campsiteSearch" method="POST">
-        <input name= "search" type="text" placeholder="Search All Campsites">
-        <button type="search">Get Campsites</button>
-      </form>
-
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
@@ -21,4 +15,33 @@
         </button>
       </a>
     <% } %>
+
+    <form action="/campsites/campsiteSearch" method="POST">
+      <input name= "search" type="text" placeholder="Search All Campsites">
+      <button type="search">Get Campsites</button>
+    </form>
+
+    <a 
+      href="/campsites/new"
+      <%- title === 'Add Campsite' ? 'class="active"' : '' %>
+      >Add Campsite
+    </a>
+
+    <a 
+      href="/campsites" <%- title === 'All Campsites' ? 'class="active"' : '' %>
+      >All Campsites
+    </a>
+
+    <a 
+      href="/profiles" <%- title === 'Profile' ? 'class="active"' : '' %>
+      >Profile
+    </a>
+
+    <a 
+      href="/profiles" <%- title === 'Users' ? 'class="active"' : '' %>
+      >Users
+    </a>
+
+
+
   </nav>

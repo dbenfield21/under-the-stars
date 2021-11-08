@@ -5,8 +5,7 @@ const Schema = mongoose.Schema
 const campsiteSchema = new mongoose.Schema({
   name: String,
   location: String,
-  rating: Number,
-  camped: Boolean, 
+  rating: {type: Number, enum: ["0", "1", "2", "3", "4", "5",]},
   comments: [{type: Schema.Types.ObjectId, ref: "Comments"}],
   savedBy: [{type: Schema.Types.ObjectId, ref: "Profile"}],
 }, {
