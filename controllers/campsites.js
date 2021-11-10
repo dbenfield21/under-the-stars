@@ -25,7 +25,7 @@ function create (req, res) {
 function show(req, res) {
   Campsite.findById(req.params.id)
   res.render("campsites/show", {
-    Campsite, 
+    campsite, 
     title: "Campsite Details", 
   })
 }
@@ -35,9 +35,13 @@ function index (req, res) {
   .then(campsites => {
     res.render("campsites/index", {
       title: "campsites",
+      user: req.user, 
+      campsites,
     })
   })
 }
+
+
 
 
 export {

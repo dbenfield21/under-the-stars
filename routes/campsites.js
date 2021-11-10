@@ -14,6 +14,7 @@ router.get("/new", isLoggedIn, campsitesCtrl.new)
 
 router.post("/", isLoggedIn, campsitesCtrl.create)
 
+// list all campsites
 router.get('/', campsitesCtrl.index)
 
 
