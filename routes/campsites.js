@@ -14,12 +14,13 @@ router.get("/new", isLoggedIn, campsitesCtrl.new)
 
 router.post("/", isLoggedIn, campsitesCtrl.create)
 
+router.get('/', campsitesCtrl.index)
 
 
 
-router.post("/", function(req,res){
-  res.send ("It works")
-})
+// router.post("/", function(req,res){
+//   res.send ("It works")
+// })
 
 router.get('/:id', campsitesCtrl.show)
 
