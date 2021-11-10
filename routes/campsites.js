@@ -12,6 +12,18 @@ router.post("/campsiteSearch", isLoggedIn, campsitesCtrl.campsiteSearch)
 
 router.get("/new", isLoggedIn, campsitesCtrl.new)
 
+router.post("/", isLoggedIn, campsitesCtrl.create)
+
+
+
+
+router.post("/", function(req,res){
+  res.send ("It works")
+})
+
+router.get('/:id', campsitesCtrl.show)
+
+
 
 // Quick way to test a newly mounted router:
 // router.get('/', function(req, res) {
