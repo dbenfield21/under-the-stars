@@ -1,0 +1,10 @@
+  <h1><%= Name %></h1>
+  <section>
+    <div>Name</div>
+    <div><%= campsite.name %></div>
+    <div>Location</div>
+    <div><%= campsite.location %></div>
+    <div>Rating</div>
+    <div><%= campsite.rating %></div>
+
+  </section>

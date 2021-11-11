@@ -16,20 +16,31 @@ function create (req, res) {
   const campsite = new Campsite(req.body)
   campsite.save(function(err) {
 		if (err) {
+      console.log(err)
       return res.redirect("/")
     }
-    res.redirect(`/campsites/${campsite._id}`)
+    res.redirect(`campsites/${campsite.id}`)
   }) 
 }
 
+//shows individual campsites finds them by their unique ID
 function show(req, res) {
   Campsite.findById(req.params.id)
-  res.render("campsites/show", {
-    campsite, 
-    title: "Campsite Details", 
+  .then(campsite =>{
+    res.render("campsites/show", {
+      campsite, 
+      title: "Campsite Details", 
+      user: req.user,
+    })
   })
+  .catch(err => {
+    console.log(err) 
+      res.redirect('/campsites/index')
+  })
+
 }
 
+//shows all the campsites
 function index (req, res) {
   Campsite.find({})
   .then(campsites => {
@@ -39,8 +50,12 @@ function index (req, res) {
       campsites,
     })
   })
-}
+  .catch(err => {
+    console.log(err) 
+      res.redirect('/campsites/index')
+  })
 
+}
 
 
 

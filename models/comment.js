@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const commentSchema = new mongoose.Schema({
+const commentSchema = new Schema({
   rating: Number,
   content: String, 
   campsite: [{type: Schema.Types.ObjectId, ref: "Campsite"}],
