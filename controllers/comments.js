@@ -5,18 +5,21 @@ import { Profile } from "../models/profile.js"
 
 
 
-function createComment (req, res) {
-  Campsite.findById(req.params.id, function (err, campsite){
-    req.body.userID = req.user._id;
-    req.body.userName = req.user.name;
-    campsite.comments.push(req.body);
-    campsite.save(function (err) {
-      res.redirect(`/campsites/${campsite.id}`)
+function create (req, res) {
+  req.body.author = req.user._id;
+  req.body.campsite = req.params.id;
+  Comment.create(req.body, function(err, comment) {
+    Campsite.findById(req.params.id, function (err, campsite){
+      campsite.comments.push(comment._id);
+      campsite.save(function (err) {
+        res.redirect(`/campsites/${campsite.id}`)
+      })
     })
   })
-  }
+}
 
   
   export {
-    createComment,
+    create,
   }
+

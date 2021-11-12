@@ -1,7 +1,5 @@
 import { Router } from 'express'
 import * as commentsCtrl from "../controllers/comments.js"
-import { Campsite } from '../models/campsite.js'
-
 
 const router = Router()
 

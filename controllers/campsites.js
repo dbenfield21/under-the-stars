@@ -27,17 +27,23 @@ function create (req, res) {
 function show(req, res) {
   Campsite.findById(req.params.id)
   .then(campsite =>{
-    res.render("campsites/show", {
-      campsite, 
-      title: "Campsite Details", 
-      user: req.user,
+    Comment.find({
+      campsite: campsite._id
+    })
+    .populate("author")
+    .then(comments => {
+      res.render("campsites/show", {
+        campsite, 
+        title: "Campsite Details", 
+        user: req.user,
+        comments, 
+      })
     })
   })
   .catch(err => {
     console.log(err) 
       res.redirect('/campsites/index')
   })
-
 }
 
 //shows all the campsites

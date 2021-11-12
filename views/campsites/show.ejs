@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="public/stylesheets/style.css" />
+<link rel="stylesheet" href="/stylesheets/style.css" />
 <%- include('../partials/nav') %>
 
 <main>
@@ -16,6 +16,15 @@
     </a>
     
   </section>
+  <h1> Comments </h1>
+<% comments.forEach(comment => { %>
+    <p><%= comment.author.name %> </p>
+    <p><%= comment.content %> </p>
+    <% }) %>
+    <form action="/comments/<%= campsite._id %>" method="POST">
+      <input type="text" name="content" id="comment-input" placeholder="Add your comments! What was your favorite part about this campsite?" >
+    <button class="btn btn-primary" button type="submit">Add Your Comment</button>
+  </form>
 
 </main>
 

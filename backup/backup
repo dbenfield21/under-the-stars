@@ -38,3 +38,58 @@
 </main>
 
 <%- include('../partials/footer') %>
+
+
+ 
+<nav>
+  <% if (user) { %>
+    <a href="/auth/logout">
+      <button type="submit">Logout</button>
+    </a>
+  <% } else { %>
+    <a href="/auth/google" class="siwg-link">
+      <button type="submit" class="siwg">
+        <img id="siwg-image" alt="Sign in with Google" />
+      </button>
+    </a>
+  <% } %>
+
+  <form action="/campsites/campsiteSearch" method="POST">
+    <input name= "search" type="text" placeholder="Search All Campsites">
+    <button class="btn btn-primary" type="search"> Get Campsites</button>
+  </form>
+
+  <a 
+    href="/campsites/new"
+    <%- title === 'Add Campsite' ? 'class="active"' : '' %>
+    >Add Campsite
+  </a>
+
+  <a 
+    href="/campsites" <%- title === 'All Campsites' ? 'class="active"' : '' %>
+    >All Campsites
+  </a>
+
+  <a 
+    href="/profiles/:id" <%- title === 'Profile' ? 'class="active"' : '' %>
+    >Profile
+  </a>
+
+  <a 
+    href="/profiles" <%- title === 'Users' ? 'class="active"' : '' %>
+    >Users
+  </a>
+
+
+
+</nav>
+
+
+
+
+
+
+<form action="/campsites/campsiteSearch" method="POST">
+  <input name= "search" type="text" placeholder="Search All Campsites">
+  <button class="btn btn-primary" type="search"> Get Campsites</button>
+</form>

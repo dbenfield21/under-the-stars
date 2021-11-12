@@ -1,6 +1,5 @@
 import { Router } from 'express'
 import * as profileCtrl from "../controllers/profiles.js"
-import { Profile } from '../models/profile.js'
 
 
 
