@@ -3,9 +3,9 @@ _____
 
 ## Getting Started
 ### **Description & Background**
-Under the Stars is a camping app intended for users to be able to track their favorite campsites. It allows users to add campsites, rate other campsites, view what campsites other users have added, as well as allowing them to follow other users. 
+Under the Stars is a camping app intended for users to be able to track their favorite campsites. It allows users to add campsites, rate other campsites, view what campsites other users have added, as well as allow them to follow other users. 
 
-I love camping and exploring in the mountains, its actually what my husband and I did for our honeymoon and we go every year on our anniversary. 
+I love camping and exploring in the mountains, it's actually what my husband and I did for our honeymoon and we go every year on our anniversary. 
 
 
 [Trello Board](https://trello.com/b/D6fD53dQ/under-the-stars)
@@ -62,10 +62,10 @@ ___
 - save campsites
 - mobile responsive design
 - light/dark mode
-- alternate text for accesibility 
+- alternate text for accessibility 
 - Improved CSS styling using daisy and tailwinds framework
 - Add animations, sounds, better styling
-- Impliment API: national parks or google maps to save locations of campsites. 
+- Implement API: national parks or google maps to save locations of campsites. 
 
 
 
