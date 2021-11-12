@@ -18,7 +18,7 @@
 
     <form action="/campsites/campsiteSearch" method="POST">
       <input name= "search" type="text" placeholder="Search All Campsites">
-      <button type="search">Get Campsites</button>
+      <button class="btn btn-primary" type="search"> Get Campsites</button>
     </form>
 
     <a 
@@ -33,7 +33,7 @@
     </a>
 
     <a 
-      href="/profiles" <%- title === 'Profile' ? 'class="active"' : '' %>
+      href="/profiles/:id" <%- title === 'Profile' ? 'class="active"' : '' %>
       >Profile
     </a>
 

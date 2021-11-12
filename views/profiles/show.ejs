@@ -1,0 +1,37 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/public/stylesheets/style.css" />
+
+<%- include('../partials/nav') %>
+
+<main>
+  <table>
+    <tbody>
+      <% if (user.profile.equals(profile._id)) { %>
+        <tr>
+          <td>Google Email:</td>
+          <td><%= user.email %></td>
+        </tr>
+      <% } %>
+      <tr>
+        <td>Name:</td>
+        <td><%= profile.name %></td>
+      </tr>
+      <tr>
+        <td>Avatar URL:</td>
+        <td>
+          <a href="<%= profile.avatar %>">
+            <%= profile.avatar.substring(0, 35) %>
+            <% if (profile.avatar.length > 35) { %>
+            ...
+            <% } %>
+          </a>
+        </td>
+        </tr>
+    </tbody>
+  </table>
+    </div>
+  
+  </section>
+</main>
+
+<%- include('../partials/footer') %>

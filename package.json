@@ -7,6 +7,7 @@
     "start": "node ./bin/www.js"
   },
   "dependencies": {
+    "daisyui": "^1.16.2",
     "debug": "^4.3.2",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
@@ -18,5 +19,10 @@
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19"
   }
 }
