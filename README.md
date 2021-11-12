@@ -65,6 +65,7 @@ ___
 - alternate text for accesibility 
 - Improved CSS styling using daisy and tailwinds framework
 - Add animations, sounds, better styling
+- Impliment API: national parks or google maps to save locations of campsites. 
 
 
 
