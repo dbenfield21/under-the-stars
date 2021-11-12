@@ -18,8 +18,11 @@
           <td><%= campsite.name %></td>
           <td><%= campsite.location %></td>
           <td><%= campsite.rating %></td>
-          
-          <!-- <td><a href="/campsites/<%= campsite._id %>">All Campsites</a></td> -->
+          <td><a href="/campsites/<%= campsite._id %>">DETAILS</a></td>
+        <td>
+          <form action="/campsites/<%= campsite._id %>?_method=DELETE" method="POST">
+            <button>X</button>
+          </form>
         </tr>
       <% })  %>
     </tbody>

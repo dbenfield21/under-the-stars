@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import * as campsitesCtrl from '../controllers/campsites.js'
+import { Campsite } from '../models/campsite.js'
 
 const router = Router()
 
@@ -18,6 +19,17 @@ router.get('/', isLoggedIn, campsitesCtrl.index)
 
 //show each campsite by ID
 router.get('/:id', isLoggedIn, campsitesCtrl.show)
+
+//delete campsite by ID
+router.delete('/:id', isLoggedIn, campsitesCtrl.delete)
+
+router.get('/:id/edit', isLoggedIn, campsitesCtrl.edit)
+
+
+// update campsite by ID  
+router.put('/:id', isLoggedIn, campsitesCtrl.update)
+
+
 
 
 function isLoggedIn(req, res, next) {

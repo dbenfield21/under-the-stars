@@ -57,6 +57,33 @@ function index (req, res) {
 
 }
 
+function deleteCampsite (req, res) {
+  Campsite.findByIdAndDelete(req.params.id, function(err, campsite) {
+    res.redirect('/campsites')
+  })
+}
+
+function edit(req, res) {
+  Campsite.findById(req.params.id, function(err, campsite) {
+    res.render('campsites/edit', {
+      title: 'Edit Campsite',
+      err, 
+      user: req.user, 
+      campsite,
+    })
+  })
+}
+
+function update (req, res) {
+    for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
+  Campsite.findByIdAndUpdate(req.params.id, req.body, function(err, campsite) {
+    res.redirect(`/campsites/${campsite.id}`)
+  })
+}
+
+
 
 
 export {
@@ -65,6 +92,9 @@ export {
   create,
   show,
   index,
+  deleteCampsite as delete,
+  update,
+  edit, 
 }
 
 
