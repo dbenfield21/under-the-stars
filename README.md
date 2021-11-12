@@ -20,7 +20,8 @@ ERD- initial design
 ![ERD](public/images/readme/erd.png)
 Wire Frame
 ![Wire Frame](public/images/readme/wf1.png)
-
+Landing Page
+![Landing Page](public/images/readme/landingpage.png)
 
 
 ___
