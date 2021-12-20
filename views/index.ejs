@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="/stylesheets/style.css" />
 
 <main>
+  <div class="greet">
   <h1>Hello <%= user ? user.profile.name : "fellow camper, login to start your adventure!" %></h1>
   <% if (user?.profile.avatar) { %>
     <div>
@@ -12,6 +13,7 @@
       >
     </div>
   <% } %>
+</div>
 </main>
 
 <%- include('./partials/footer') %>

@@ -52,3 +52,12 @@ main {
 h1 {
   font-size:2.6rem;
 } 
+
+.table {
+  color: blueviolet;
+}
+
+.greet {
+  color: whitesmoke;
+  size: 100px;
+}

@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-  
+  <div class="table">
   <h1> Campsite </h1>
   <section>
     <div>Name</div>
@@ -23,10 +23,10 @@
     <p><%= comment.content %> </p>
     <% }) %>
     <form action="/comments/<%= campsite._id %>" method="POST">
-      <input type="text" name="content" id="comment-input" placeholder="Add your comments! What was your favorite part about this campsite?" >
+      <input type="text" name="content" id="comment-input" placeholder="Add your comments!" >
     <button class="btn btn-primary" button type="submit">Add Your Comment</button>
   </form>
-
+</div>
 </main>
 
 <%- include('../partials/footer') %>
