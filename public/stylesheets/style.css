@@ -1,6 +1,6 @@
 html {
-  box-sizing: border-box
-  
+  box-sizing: border-box;
+  height: 100%;
 }
 
 /* The Universal Selector */
@@ -19,12 +19,14 @@ html {
 }
 
 body {
-  
+  background-image: url("/images/background.jpg");
+  background-size:cover;
   /* background-color: whitesmoke; */
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
+  height: 100%;
 }
 
 /* nav {
@@ -41,6 +43,12 @@ main {
   flex-direction: column;
 }
 
+#waffle {
+  background-color: rgba(184, 20, 151, 0.4) ;
+  padding: 25px;
+  z-index: 1;
+}
+
 h1 {
   font-size:2.6rem;
-} */
+} 
